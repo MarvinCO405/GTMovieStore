@@ -21,15 +21,11 @@ movies = [
     },
 ]
 def index(request):
-    template_data = {}
-    template_data['title'] = 'Movies'
-    template_data['movies'] = movies
+    template_data = {'title': 'Movies', 'movies': movies}
     return render(request, 'movies/index.html',
                   {'template_data': template_data})
 
 def show(request, id):
-    movie = movie[id - 1]
-    template_data = {}
-    template_data['title'] = movie['name']
-    template_data['movie'] = movie
-    return renderIrequest, 'movies/show.html', {'template_data': template_data})
+    movie = movies[id - 1]
+    template_data = {'title': movie['name'], 'movie': movie}
+    return render(request, 'movies/show.html', {'template_data': template_data})
