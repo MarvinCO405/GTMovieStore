@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
-
 movies = [
     {
         'id': 1, 'name': 'Inception', 'price': 12,
@@ -21,7 +19,16 @@ movies = [
     },
 ]
 def index(request):
-    template_data = {'title': 'Movies', 'movies': movies}
+    search_term = request.GET.get('search')
+    if search_term:
+        movies = (
+            Movie.objects.filter(name__icontains=search_term))
+    else:
+        movies = Movie.objects.all()
+
+    template_data = {}
+    template_data['title'] = 'Movies'
+    template_data['movies'] = Movie.objects.all()
     return render(request, 'movies/index.html',
                   {'template_data': template_data})
 
