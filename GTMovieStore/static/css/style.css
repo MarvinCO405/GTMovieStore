@@ -34,7 +34,7 @@
     line-height: 38px;
   }
 
-  .ms-footer-bottom a, .author-names {
+  .ms-footer-bottom a {
     color: #6ab43e;
     text-decoration: none;
   }
