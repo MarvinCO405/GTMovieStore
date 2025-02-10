@@ -7,6 +7,10 @@
     color: #FFFEF6 !important;
   }
 
+  .navbar a.nav-link:hover {
+    color: #6ab43e !important;
+  }
+
   .bg-dark {
     background-color: #2E2E2E !important;
   }
@@ -30,13 +34,17 @@
     line-height: 38px;
   }
 
-  .ms-footer-bottom a {
+  .ms-footer-bottom a, .author-names {
     color: #6ab43e;
     text-decoration: none;
   }
 
   .ms-footer-bottom a:hover {
     color: #fff;
+  }
+
+  .author-names:hover {
+    color: #9d9d02;
   }
 
   .img-card-200 {
