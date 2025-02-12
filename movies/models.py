@@ -8,6 +8,9 @@ class Movie(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='movie_images/')
 
+    def __str__(self):
+        return self.name
+
 class Review(models.Model):
     id = models.AutoField(primary_key=True)
     comment = models.CharField(max_length=255)
