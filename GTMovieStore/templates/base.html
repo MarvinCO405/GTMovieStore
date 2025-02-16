@@ -11,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
-  <body>
+  <body style="background-color: #981515">
     <!-- Header -->
-    <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
+    <nav class="p-3 navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="{% url 'home.index' %}">
           <img src="{% static 'img/logo.png' %}" alt="logo" height="40" />
@@ -24,9 +24,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto navbar-ml">
-<!--            <a class="nav-link" href="{% url 'home.about' %}">About</a>-->
-<!--            <a class="nav-link" href="{% url 'movies.index' %}">Movies</a>-->
-<!--              <a class="nav-link" href="{% url 'cart.index' %}">Cart</a>-->
             <div class="vr bg-white mx-2 d-none d-lg-block"></div>
 
             {% if user.is_authenticated %}
@@ -47,42 +44,18 @@
     </nav>
     <!-- Header -->
 
-    <div>
+    <div class="content-container">
       {% block content %}
       {% endblock content %}
     </div>
 
     <!-- Footer -->
-   <section class="p-3 ms-footer d-none d-md-block bg-dark">
-  <div class="container">
-    <div class="row mt-3 text-white">
-      <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
-        <h5 class="fw-bold">MOVIES STORE</h5>
-        <hr class="mb-3" />
-        <p>
-          Welcome to Movies Store, your premier online destination for a cinematic
-          adventure like no other! Dive into the world of movies from the comfort of your own home with our user-friendly
-          and immersive online movie store.
-        </p>
-      </div>
-
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-        <h5 class="fw-bold">CONTACT</h5>
-        <hr class="mb-3" />
-        <p><i class="fas fa-home me-2"></i> 150-2345 Tokyo-to, Japan</p>
-        <p><i class="fas fa-envelope me-2"></i> info@moviesstore.com</p>
-        <p><i class="fas fa-phone me-2"></i> +81 03-3333-3333</p>
-      </div>
+    <section class="p-3 ms-footer-bottom text-white text-center">
+    <div class="author-names-container">
+      <p class="mb-0"><i>Designed by Jake Abujawdeh, Buddy Moss, Sergio Chavez, and Marvin Ortiz</i></p>
     </div>
-  </div>
-</section>
+    </section>
 
-<section class="p-3 ms-footer-bottom bg-black text-white text-center">
-  <div class="container">
-    <p class="mb-0">Designed by Jake Abujawdeh, Buddy Moss, Sergio Chaves, and Marvin Ortiz</p>
-  </div>
-</section>
 
-    <!-- Footer -->
   </body>
 </html>

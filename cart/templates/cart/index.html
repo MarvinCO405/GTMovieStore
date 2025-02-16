@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col mx-auto mb-3">
-                <h2>Shopping Cart</h2>
+                <h2 class="text-white">Shopping Cart</h2>
                 <hr />
             </div>
         </div>
@@ -45,7 +45,7 @@
         </a>
      {% if template_data.movies_in_cart|length > 0 %}
         <a href="{% url 'cart.purchase' %}"
-           class = "btn bg-dark text-white mb-2">Purchase
+           class = "btn mb-2 purchase-btn">Purchase
         </a>
  <a href="{% url 'cart.clear' %}">
  <button class="btn btn-danger mb-2">
